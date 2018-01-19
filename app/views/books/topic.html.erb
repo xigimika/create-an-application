@@ -1,0 +1,13 @@
+<body class="topic-body">
+	<p>Title:</p>
+		<%= @book.title %>
+	<p>Body:</p>
+		<%= @book.body %><br>
+
+	<p></p>
+	<p></p>
+
+	<%= link_to "Edit", edit_book_path(@book.id) %>
+	<%= link_to "Black", books_path %>
+
+</body>
