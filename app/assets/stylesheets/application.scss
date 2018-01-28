@@ -13,6 +13,37 @@
  *= require_tree .
  *= require_self
  */
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+
+
+.header{
+	position: relative;
+	background-color: black;
+	color: white;
+}
+
+.navbar-nav > li > a{
+	color: white;
+	/*position: absolute;*/
+}
+
+.edit-enter{
+	border-color: #ccc;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+	background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
 
 .top-body{
 	font-size: 13px;
@@ -35,7 +66,7 @@
 
 .edit-enter{
 	margin-top: 10px;
-	color: : #666;
+	color: #666;
 }
 
 .index-body{

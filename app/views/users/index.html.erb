@@ -1,4 +1,4 @@
-<div class="index-body">
+<div class="user-index-body">
 
 
 <div class="container">
@@ -8,8 +8,6 @@
 			<table class="table teble-striped">
 			<tr>
 				<%= attachment_image_tag current_user, :image, :fill, 100, 100,  fallback: "no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg"%>
-
-
 
 			</tr>
 			<tr>
@@ -30,7 +28,7 @@
 				</div>
 			</tr>
 			</tr>
-			<tr>
+						<tr>
 				<th><h2>New book</h2>
 				<!-- form_for部分 -->
 				<%= form_for(@book) do |f| %>
@@ -48,32 +46,26 @@
 			</table>
 		</div>
 		<div class="col-lg-9">
-			<h1 class="index">Books</h1>
+			<h1 class="index">Users</h1>
 			<table class="table teble-striped">
 				<tr>
-					<th><p>Title</p></th>
-					<th><p>Body</p></th>
+					<th><p>image</p></th>
+					<th><p>name</p></th>
 					<th><p></p></th>
 				</tr>
-
-			  <% @books.each do |book| %>
+              <% @users.each do |user| %>
 			  <tr>
-				<td><%= book.title %></td>
-				<td><%= book.body %></td>
-				<td><%= link_to "Edit", edit_book_path(book.id) %></td>
+			  	<td><%= user.image %></td>
+				<td><%= user.name %></td>
 				<td><%#= link_to "Show", topic_path(book.id) %></td>
-				<td><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %><br></td>
 			  </tr>
 
-
+   
 			<% end %>
 			</table>
 		</div>
 	</div>
 </div>
-
-
-
 
 
 </div>

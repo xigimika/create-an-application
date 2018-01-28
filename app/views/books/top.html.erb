@@ -1,11 +1,13 @@
-<body class="top-body">
-<h1><b>ようこそBookersへ！</b></h1>
+<div class="top-body">
+<h1><b>welcome to <span class="glyphicon glyphicon-book" aria-hidden="true"></span>Bookers!!</b></h1>
 
   	<p>
-  		<b>Bookers</b> では、さまざまな書籍に関するあなたの意見や<br>
-  		印象を共有し交換することができます
+  		In <span class="glyphicon glyphicon-book" aria-hidden="true"></span><b>Bookers,</b><br>
+		you can share and exchange your opinions , inpressions , and emotions<br>
+		about varioius books!
   	</p>
 
-<%= link_to "start", books_path %>
+<%= link_to "Log in", new_user_session_path %>
+<%= link_to "Sign in", new_user_registration_path %>
 
-</body>
+</div>
