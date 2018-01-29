@@ -31,35 +31,30 @@
               <span class="icon-bar"></span>
             </button>
           </div>
-          <div id="slidemenu">
-            <p><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Bookers</p>
-            <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
-                <% if user_signed_in? %>
-                <li class="head-top">
-                	<%= link_to "Home",user_path( current_user) %>
-                </li>
-                <li class="head-top">
-                  <%= link_to "Users", users_path %>
-              	</li>
-              	<li class="head-top">
-              	 <%= link_to "Books", books_path %>
-              	</li>
-              	<li class="head-top">
-                  <%= link_to "logout", destroy_user_session_path, method: :delete %>
-                </li>
+              <header class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+              <nav class="nav navbar-nav navbar-left">
+                <span class="glyphicon glyphicon-book">Bookers</span>
+              </nav>
+              <% if user_signed_in? %>
+              <nav>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a class="glyphicon glyphicon-home" href="/users/books"> Home</a></li>
+                  <li><a class="glyphicon glyphicon-user" href="/users"> Users</a></li>
+                  <li><a class="glyphicon glyphicon-book" href="/books"> Books</a></li>
+                  <li><a class="glyphicon glyphicon-log-out" rel="nofollow" data-method="delete" href="/users/sign_out"> logout</a></li>
+                </ul>
+              </nav>
+            </div>
               <% else %>
-              	<li class="head-top">
-              		<%= link_to "Home",root_path %>
-              	</li>
-              	<li class="head-top">
-              		<%= link_to "about", root_path %>
-              	</li>
-              	<li class="head-top">
-              		<%= link_to "sign in", new_user_registration_path %>
-              	</li>
-              	<li class="head-top">
-                	<%= link_to "login", new_user_session_path %>
-             	</li>
+            <nav>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a class="glyphicon glyphicon-home" href="/"> Home</a></li>
+                  <li><a class="glyphicon glyphicon-link" href="/"> About</a></li>
+                  <li><a class="glyphicon glyphicon-edit" href="/users/sign_up"> sign up</a></li>
+                  <li><a class="glyphicon glyphicon-log-in" href="/users/sign_in"> login</a></li>
+              </ul>
+            </nav>
               <% end %>
                
             </ul>
@@ -67,6 +62,16 @@
         </div>
       </nav>
     </div>
-    <%= yield %>
+     <%= yield %>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-xs-offset-9">
+            <p>CopyRight Infratop.inc</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>

@@ -12,6 +12,12 @@ class BooksController < ApplicationController
   end
 
   def index
+    @users = User.all
+    @books = Book.all
+    @book = Book.new
+  end
+
+  def show
   	@books = Book.all
   	@book = Book.new
   end

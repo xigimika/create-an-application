@@ -23,9 +23,43 @@
 	color: white;
 }
 
+.head-top{
+	font-size: 20px;
+}
+
+header .navbar-left span{
+	font-size: 20px;
+    padding-top: 10px;
+}
+
 .navbar-nav > li > a{
 	color: white;
 	/*position: absolute;*/
+}
+
+.col-xs-1, .col-xs-2, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9,  .col-xs-11, .col-xs-12{
+	float: none;
+}
+
+h2{
+	font-size: 30px;
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
+	padding: 4px;
+}
+
+.btn-info{
+	color: #666;
+	margin-left: -83px;
+}
+
+.btn-success{
+	color: #666;
+}
+
+.btn-danger{
+	color: #666;
 }
 
 .edit-enter{
@@ -45,6 +79,11 @@
     border-radius: 4px;
 }
 
+.body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.5px;
+}
+
 .top-body{
 	font-size: 13px;
 	font-family: verdana, arial, helvetica, sans-serif;
@@ -52,20 +91,28 @@
 	line-height: 18px;
 }
 
+.edit-top{
+	margin: 15px 45px;
+}
 
 .edit-body{
 	font-size: 13px;
 	font-family: verdana, arial, helvetica, sans-serif;
-	margin: 33px;
+	margin: 20px;
 	line-height: 18px;
 }
 
 .edit-text{
-	margin: 10px 0 0px;
+	margin: 10px 400px 0px;
 }
 
 .edit-enter{
 	margin-top: 10px;
+	color: #666;
+}
+
+.edit-enter-book{
+	margin: 15px 400px;
 	color: #666;
 }
 
@@ -83,7 +130,4 @@
 	margin: 33px;
 	line-height: 18px;
 }
-
-
-
 
